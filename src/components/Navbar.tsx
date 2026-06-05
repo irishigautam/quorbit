@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const services = [
@@ -17,10 +18,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight text-gray-950">
-            Quorbit
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Quorbit" width={140} height={40} className="h-10 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}
