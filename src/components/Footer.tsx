@@ -67,8 +67,8 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-midnight-muted flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-ice-muted">© {new Date().getFullYear()} Quorbit. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="text-xs text-ice-muted hover:text-ice transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-xs text-ice-muted hover:text-ice transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-xs text-ice-muted hover:text-ice transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-xs text-ice-muted hover:text-ice transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
