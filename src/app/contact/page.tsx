@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Schedule a Strategy Call — Quorbit",
@@ -28,17 +29,14 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-midnight pt-24 pb-20 px-6 border-b border-midnight-muted"
+      <section className="relative bg-midnight pt-24 pb-28 px-6 overflow-hidden border-b border-midnight-muted"
         style={{ backgroundImage: "radial-gradient(circle, rgba(255,201,25,0.05) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
-        <div className="max-w-3xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow block mb-6">Free Strategy Call</span>
-          <div className="w-12 h-0.5 bg-yellow mb-7" />
-          <h1 className="text-5xl sm:text-6xl font-black tracking-tight leading-[1.05] text-ice mb-5">
-            Let&apos;s Talk Growth
-          </h1>
-          <p className="text-ice-muted text-lg leading-relaxed max-w-xl">
-            30 minutes. No commitment. No long-deck sales pitch. Just a direct conversation with someone who&apos;s done this before.
-          </p>
+        <div className="relative max-w-4xl mx-auto">
+          <ServiceHero
+            badge="Free Strategy Call"
+            headline="Let's Talk Growth"
+            subheadline="30 minutes. No commitment. No long-deck sales pitch. Just a direct conversation with someone who's done this before."
+          />
         </div>
       </section>
 
