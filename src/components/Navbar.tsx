@@ -13,34 +13,29 @@ const services = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-midnight border-b border-midnight-muted">
-      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 bg-midnight">
+      <nav className="max-w-7xl mx-auto px-6 grid grid-cols-[1fr_auto_1fr] items-center h-16">
+
+        {/* Logo — left */}
         <Link href="/" className="flex items-center">
           <Image src="/light-logo.png" alt="Quorbit" width={140} height={40} className="h-10 w-auto" priority />
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <div className="relative">
-            <button
-              className="text-sm font-medium text-ice-muted hover:text-ice flex items-center gap-1 transition-colors"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
+        {/* Desktop nav pill — center */}
+        <div className="hidden md:flex items-center bg-midnight-light rounded-full px-2 py-1.5 gap-0.5">
+
+          {/* Services dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1.5 text-sm font-medium text-ice px-4 py-1.5 rounded-full hover:bg-midnight-muted transition-colors">
               Services
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            {servicesOpen && (
-              <div
-                className="absolute top-full left-0 mt-2 w-64 bg-midnight-light border border-midnight-muted rounded-xl shadow-2xl py-2"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
+            <div className="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+              <div className="w-64 bg-midnight-light border border-midnight-muted rounded-xl shadow-2xl py-2">
                 {services.map((s) => (
                   <Link
                     key={s.href}
@@ -51,37 +46,46 @@ export default function Navbar() {
                   </Link>
                 ))}
               </div>
-            )}
+            </div>
           </div>
-          <Link href="/contact" className="text-sm font-medium text-ice-muted hover:text-ice transition-colors">
-            Contact
-          </Link>
+
           <Link
             href="/contact"
-            className="inline-flex items-center gap-1.5 bg-yellow text-midnight text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-dark transition-colors"
+            className="text-sm font-medium text-ice px-4 py-1.5 rounded-full hover:bg-midnight-muted transition-colors"
+          >
+            Contact
+          </Link>
+        </div>
+
+        {/* Right side */}
+        <div className="flex items-center justify-end">
+          {/* Desktop CTA */}
+          <Link
+            href="/contact"
+            className="hidden md:inline-flex items-center gap-1.5 bg-yellow hover:bg-yellow-dark text-midnight text-xs font-bold px-5 py-2.5 rounded-full uppercase tracking-widest transition-colors"
           >
             Schedule a Call
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
-        </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 text-ice-muted hover:text-ice"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden p-2 text-ice-muted hover:text-ice"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -101,7 +105,7 @@ export default function Navbar() {
           <div className="pt-3 border-t border-midnight-muted mt-3">
             <Link
               href="/contact"
-              className="block w-full text-center bg-yellow text-midnight text-sm font-bold px-4 py-2.5 rounded-lg"
+              className="block w-full text-center bg-yellow hover:bg-yellow-dark text-midnight text-sm font-bold px-4 py-2.5 rounded-full uppercase tracking-widest transition-colors"
               onClick={() => setOpen(false)}
             >
               Schedule a Call

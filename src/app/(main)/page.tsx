@@ -1,42 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import HeroHeadline from "@/components/HeroHeadline";
-import StatCounter from "@/components/StatCounter";
+import StatsSection from "@/components/StatsSection";
 import ClientResults from "@/components/ClientResults";
+import ServicesSection from "@/components/ServicesSection";
 
-const stats = [
-  { number: "3×", label: "Average revenue lift", sub: "in 6 months" },
-  { number: "140%", label: "Organic traffic growth", sub: "within 12 months" },
-  { number: "31%", label: "Paid CAC reduction", sub: "first 60 days" },
-  { number: "$94K", label: "Monthly revenue", sub: "scaled from $28K" },
-];
 
-const services = [
-  {
-    num: "01",
-    title: "Performance Marketing",
-    desc: "Full-funnel paid media across Google, Meta, LinkedIn, and YouTube. Every dollar traceable to a real outcome.",
-    href: "/services/performance-marketing",
-  },
-  {
-    num: "02",
-    title: "E-Commerce Management",
-    desc: "Platform management, catalog optimization, and performance advertising — built to scale monthly revenue.",
-    href: "/services/ecommerce",
-  },
-  {
-    num: "03",
-    title: "All-in-One Digital Marketing",
-    desc: "SEO, paid media, email, and social under one strategy. When channels share data, results compound.",
-    href: "/services/all-in-one",
-  },
-  {
-    num: "04",
-    title: "Website & Automation",
-    desc: "Websites, CRM, and automation systems built and integrated. Turn traffic into revenue — automatically.",
-    href: "/services/website-automation",
-  },
-];
 
 
 export default function Home() {
@@ -52,26 +21,6 @@ export default function Home() {
           width: max-content;
           animation: marquee 30s linear infinite;
         }
-        .svc-row {
-          position: relative;
-          transition: background-color 0.2s;
-        }
-        .svc-row::before {
-          content: '';
-          position: absolute;
-          left: -1.5rem;
-          top: 0; bottom: 0;
-          width: 2px;
-          background: #FFC919;
-          opacity: 0;
-          transition: opacity 0.2s;
-        }
-        .svc-row:hover { background-color: rgba(255,201,25,0.03); }
-        .svc-row:hover::before { opacity: 1; }
-        .svc-row:hover .svc-title { color: #FFC919; }
-        .svc-title { transition: color 0.2s; }
-        .svc-arrow { transition: transform 0.2s; }
-        .svc-row:hover .svc-arrow { transform: translateX(5px); }
       `}</style>
 
       <div>
@@ -113,48 +62,10 @@ export default function Home() {
         </div>
 
         {/* ── STATS ── */}
-        <section className="bg-midnight py-16 px-6">
-          <div className="max-w-6xl mx-auto border border-midnight-muted">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-y divide-midnight-muted md:divide-y-0 md:divide-x divide-midnight-muted">
-              {stats.map((s) => (
-                <StatCounter key={s.label} number={s.number} label={s.label} sub={s.sub} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <StatsSection />
 
-        {/* ── SERVICES EDITORIAL LIST ── */}
-        <section id="services" className="bg-midnight-light py-24 px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-end justify-between mb-10 border-b border-midnight-muted pb-8">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow block mb-3">Services</span>
-                <h2 className="text-4xl font-black text-ice">The full orbit.</h2>
-              </div>
-              <Link href="/contact" className="text-sm font-semibold text-ice-muted hover:text-yellow transition-colors flex items-center gap-2 shrink-0 pb-1">
-                Discuss your scope
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="divide-y divide-midnight-muted border-b border-midnight-muted">
-              {services.map((svc) => (
-                <Link key={svc.href} href={svc.href} className="block">
-                  <div className="svc-row flex items-center gap-6 py-7 px-6 -mx-6 cursor-pointer">
-                    <span className="text-xs font-bold text-ice-muted w-8 shrink-0">{svc.num}</span>
-                    <span className="svc-title text-xl font-black text-ice flex-1">{svc.title}</span>
-                    <span className="text-sm text-ice-muted leading-relaxed max-w-xs hidden md:block">{svc.desc}</span>
-                    <svg className="svc-arrow w-5 h-5 text-ice-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ── SERVICES ── */}
+        <ServicesSection />
 
         {/* ── BOLD STATEMENT ── */}
         <section className="bg-midnight py-28 px-6 border-y border-midnight-muted">
