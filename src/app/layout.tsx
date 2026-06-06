@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -30,10 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${archivo.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased bg-midnight text-ice">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
 }
+
