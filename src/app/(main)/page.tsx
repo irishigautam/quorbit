@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HeroHeadline from "@/components/HeroHeadline";
 import StatCounter from "@/components/StatCounter";
+import ClientResults from "@/components/ClientResults";
 
 const stats = [
   { number: "3×", label: "Average revenue lift", sub: "in 6 months" },
@@ -37,20 +38,6 @@ const services = [
   },
 ];
 
-const results = [
-  {
-    quote: "CPL dropped from $340 to $180 in 60 days. Lead-to-close rate improved from 8% to 14%.",
-    label: "B2B SaaS — Performance Marketing",
-  },
-  {
-    quote: "Organic traffic up 140%. Email revenue tripled via automated flow rebuild. Paid CAC down 31%.",
-    label: "B2C Lifestyle Brand — All-in-One",
-  },
-  {
-    quote: "Monthly store revenue scaled from $28K to $94K in 5 months with rebuilt Shopping and Meta campaigns.",
-    label: "Home Goods — E-Commerce",
-  },
-];
 
 export default function Home() {
   return (
@@ -90,7 +77,7 @@ export default function Home() {
       <div>
         {/* ── HERO ── */}
         <section
-          className="relative min-h-[90vh] flex flex-col justify-between bg-midnight px-8 pt-12 pb-10 overflow-hidden"
+          className="relative min-h-[72vh] flex flex-col justify-between bg-midnight px-8 pt-8 pb-8 overflow-hidden"
           style={{
             backgroundImage: "radial-gradient(circle, rgba(255,201,25,0.07) 1px, transparent 1px)",
             backgroundSize: "32px 32px",
@@ -217,22 +204,7 @@ export default function Home() {
         </section>
 
         {/* ── CLIENT RESULTS ── */}
-        <section className="bg-midnight py-24 px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow block mb-3">Client Results</span>
-              <h2 className="text-4xl font-black text-ice">Results we&apos;re accountable to.</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-midnight-muted border border-midnight-muted">
-              {results.map((r) => (
-                <div key={r.label} className="bg-midnight p-10 flex flex-col justify-between gap-8">
-                  <p className="text-lg font-semibold text-ice leading-relaxed">{r.quote}</p>
-                  <span className="text-xs font-bold text-yellow uppercase tracking-widest">{r.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ClientResults />
 
         {/* ── FINAL CTA ── */}
         <section className="bg-midnight-light py-28 px-6 border-t border-midnight-muted">
