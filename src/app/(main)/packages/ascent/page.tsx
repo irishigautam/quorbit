@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Ascent Package — Quorbit",
   description:
-    "The complete growth stack for ambitious businesses. Paid media, email marketing, SDR outreach, social, SEO, and AEO/GEO — working in perfect coordination. Starting at $6,500/month.",
+    "The complete growth stack for ambitious businesses. Paid media, email marketing, SDR outreach, social, SEO, and AEO/GEO — working in perfect coordination. Starting at $2,100/month.",
   openGraph: {
     title: "Ascent Package — Quorbit",
     description:
@@ -35,16 +35,16 @@ export default function AscentPage() {
             badge="Ascent Package"
             headline="Scale Every Channel. Accelerate Every Metric."
             subheadline="The complete growth stack for ambitious businesses. Paid media, email marketing, SDR outreach, social, SEO, and AEO/GEO — working in perfect coordination."
-            price="$6,500"
+            price="$2,100"
           />
         </div>
       </section>
 
       {/* ── PRICING BANNER ── */}
       <PricingBanner
-        price="$6,500"
-        setupFee="$2,500"
-        note="Setup covers full channel audits, strategy development, email platform buildout, SDR sequence creation, and campaign launch."
+        price="$2,100"
+        setupFee="Custom Quote"
+        note="One-time setup fee applies. Pricing depends on platform requirements and project scope. A custom quote will be provided before engagement begins."
         background="light"
       />
 

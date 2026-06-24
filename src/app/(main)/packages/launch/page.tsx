@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Launch Package — Quorbit",
   description:
-    "The essential digital marketing foundation for businesses ready to grow. Paid media, social, SEO, and AEO/GEO — coordinated from day one. Starting at $3,500/month.",
+    "The essential digital marketing foundation for businesses ready to grow. Paid media, social, SEO, and AEO/GEO — coordinated from day one. Starting at $1,200/month.",
   openGraph: {
     title: "Launch Package — Quorbit",
     description:
@@ -35,16 +35,16 @@ export default function LaunchPage() {
             badge="Launch Package"
             headline="Launch Your Digital Presence the Right Way."
             subheadline="Performance-driven marketing fundamentals for businesses ready to stop guessing and start growing. Paid media, social, SEO, and AEO/GEO — coordinated from day one."
-            price="$3,500"
+            price="$1,200"
           />
         </div>
       </section>
 
       {/* ── PRICING BANNER ── */}
       <PricingBanner
-        price="$3,500"
-        setupFee="$1,500"
-        note="Setup covers onboarding, account audits, strategy development, and campaign buildout."
+        price="$1,200"
+        setupFee="Custom Quote"
+        note="One-time setup fee applies. Pricing depends on platform requirements and project scope. A custom quote will be provided before engagement begins."
         background="light"
       />
 

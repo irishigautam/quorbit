@@ -12,6 +12,13 @@ interface RowGroup {
 
 const groups: RowGroup[] = [
   {
+    heading: "Pricing",
+    rows: [
+      { feature: "Monthly Retainer", launch: "$1,200/mo", ascent: "$2,100/mo", orbit: "$3,500/mo" },
+      { feature: "Setup Fee", launch: "Custom Quote", ascent: "Custom Quote", orbit: "Custom Quote" },
+    ],
+  },
+  {
     heading: "Performance Marketing",
     rows: [
       { feature: "Google Search & Shopping", launch: true, ascent: true, orbit: true },
@@ -125,15 +132,15 @@ export default function ComparisonTable() {
             </th>
             <th className="px-4 py-4 text-center font-black text-ice text-sm w-[20%]">
               Launch
-              <div className="text-xs font-normal text-ice-muted mt-0.5">$3,500/mo</div>
+              <div className="text-xs font-normal text-ice-muted mt-0.5">$1,200/mo</div>
             </th>
             <th className="px-4 py-4 text-center w-[20%] relative">
               <div className="font-black text-yellow text-sm">Ascent</div>
-              <div className="text-xs font-normal text-ice-muted mt-0.5">$6,500/mo</div>
+              <div className="text-xs font-normal text-ice-muted mt-0.5">$2,100/mo</div>
             </th>
             <th className="px-4 py-4 text-center font-black text-ice text-sm w-[20%]">
               Orbit
-              <div className="text-xs font-normal text-ice-muted mt-0.5">From $12,000/mo</div>
+              <div className="text-xs font-normal text-ice-muted mt-0.5">$3,500/mo</div>
             </th>
           </tr>
         </thead>

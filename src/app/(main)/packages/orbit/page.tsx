@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Orbit Package — Quorbit",
   description:
-    "Total marketing command. Every channel, a dedicated team, enterprise reporting, and full attribution modeling. Our flagship offering for businesses ready to dominate. Starting at $12,000/month.",
+    "Total marketing command. Every channel, a dedicated team, enterprise reporting, and full attribution modeling. Our flagship offering for businesses ready to dominate. Starting at $3,500/month.",
   openGraph: {
     title: "Orbit Package — Quorbit",
     description:
@@ -34,16 +34,16 @@ export default function OrbitPage() {
             badge="Orbit Package — Flagship"
             headline="Total Marketing Command. Nothing Left on the Table."
             subheadline="Our flagship offering. Every channel. A dedicated team. Enterprise reporting. Built for businesses that don't just want to grow — they want to dominate."
-            price="From $12,000"
+            price="$3,500"
           />
         </div>
       </section>
 
       {/* ── PRICING BANNER ── */}
       <PricingBanner
-        price="From $12,000"
-        setupFee="$3,500"
-        note="Orbit is scoped to your specific business. Final pricing reflects channel mix, team allocation, and reporting requirements. Schedule a call for a custom quote."
+        price="$3,500"
+        setupFee="Custom Quote"
+        note="One-time setup fee applies. Pricing depends on platform requirements and project scope. A custom quote will be provided before engagement begins."
         background="light"
       />
 

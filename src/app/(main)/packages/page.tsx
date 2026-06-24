@@ -21,7 +21,7 @@ const cards = [
   {
     name: "Launch",
     tagline: "Start Smart. Start Strong.",
-    price: "$3,500",
+    price: "$1,200",
     description:
       "The essential digital marketing foundation for businesses ready to stop guessing and start growing. Paid media, social, SEO, and AEO/GEO — coordinated from day one.",
     features: [
@@ -37,7 +37,7 @@ const cards = [
   {
     name: "Ascent",
     tagline: "Scale With Precision.",
-    price: "$6,500",
+    price: "$2,100",
     description:
       "The complete growth stack for ambitious businesses. Paid media, email marketing, SDR outreach, social, SEO, and AEO/GEO — working in perfect coordination.",
     features: [
@@ -54,8 +54,7 @@ const cards = [
   {
     name: "Orbit",
     tagline: "Total Marketing Command.",
-    price: "Custom",
-    period: "from $12,000/month",
+    price: "$3,500",
     description:
       "Our flagship offering. Every channel. A dedicated team. Enterprise reporting. Built for businesses that don't just want to grow — they want to dominate.",
     features: [
