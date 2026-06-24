@@ -11,6 +11,13 @@ const services = [
   { label: "Website & Automation", href: "/services/website-automation" },
 ];
 
+const packages = [
+  { label: "Launch", href: "/packages/launch" },
+  { label: "Ascent", href: "/packages/ascent" },
+  { label: "Orbit", href: "/packages/orbit" },
+  { label: "Compare All Packages", href: "/packages" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -43,6 +50,33 @@ export default function Navbar() {
                     className="block px-4 py-2.5 text-sm text-ice-muted hover:text-ice hover:bg-midnight-muted transition-colors"
                   >
                     {s.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Packages dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1.5 text-sm font-medium text-ice px-4 py-1.5 rounded-full hover:bg-midnight-muted transition-colors">
+              Packages
+              <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+              <div className="w-56 bg-midnight-light border border-midnight-muted rounded-xl shadow-2xl py-2">
+                {packages.map((p, i) => (
+                  <Link
+                    key={p.href}
+                    href={p.href}
+                    className={`block px-4 py-2.5 text-sm hover:bg-midnight-muted transition-colors ${
+                      i === packages.length - 1
+                        ? "text-yellow hover:text-yellow border-t border-midnight-muted mt-1 pt-3"
+                        : "text-ice-muted hover:text-ice"
+                    }`}
+                  >
+                    {p.label}
                   </Link>
                 ))}
               </div>
@@ -102,6 +136,21 @@ export default function Navbar() {
               {s.label}
             </Link>
           ))}
+          <div className="pt-3 border-t border-midnight-muted mt-3">
+            <p className="text-xs font-semibold text-ice-muted uppercase tracking-wider mb-2">Packages</p>
+            {packages.map((p, i) => (
+              <Link
+                key={p.href}
+                href={p.href}
+                className={`block py-2 text-sm hover:text-ice ${
+                  i === packages.length - 1 ? "text-yellow" : "text-ice-muted"
+                }`}
+                onClick={() => setOpen(false)}
+              >
+                {p.label}
+              </Link>
+            ))}
+          </div>
           <div className="pt-3 border-t border-midnight-muted mt-3">
             <Link
               href="/contact"
