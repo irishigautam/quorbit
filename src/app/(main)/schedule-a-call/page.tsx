@@ -80,17 +80,115 @@ export default function ScheduleACallPage() {
               </div>
             </ScrollReveal>
 
-            {/* Booking iframe */}
+            {/* Booking card */}
             <ScrollReveal delay={0.1}>
               <div className="border border-midnight-muted rounded-xl overflow-hidden bg-midnight">
-                <iframe
-                  src="https://outlook.office.com/book/QuorbitFullStackMarketingAutomationAgency@thequorbit.com/?ismsaljsauthenabled"
-                  title="Book a Strategy Call — Quorbit"
-                  loading="lazy"
-                  allow="camera; microphone; autoplay; clipboard-write"
-                  className="w-full border-0 block"
-                  style={{ minHeight: "950px" }}
-                />
+
+                {/* Card header */}
+                <div
+                  className="relative flex flex-col items-center justify-center py-14 px-8 border-b border-midnight-muted"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, rgba(255,201,25,0.07) 1px, transparent 1px)",
+                    backgroundSize: "24px 24px",
+                  }}
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-yellow/10 border border-yellow/20 flex items-center justify-center mb-5">
+                    <svg
+                      className="w-8 h-8 text-yellow"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-yellow">
+                    Microsoft Bookings
+                  </span>
+                </div>
+
+                {/* Card body */}
+                <div className="p-8 sm:p-10">
+                  <div className="w-10 h-0.5 bg-yellow mb-6" />
+                  <h2 className="text-2xl sm:text-3xl font-black text-ice leading-tight mb-5">
+                    Book Your Free Strategy Call
+                  </h2>
+                  <p className="text-ice-muted leading-relaxed mb-3">
+                    Our scheduling portal is hosted on Microsoft Bookings — a secure, dedicated
+                    platform for managing appointments. Clicking the button below will open a new
+                    tab where you can select your preferred date and time.
+                  </p>
+                  <p className="text-ice-muted leading-relaxed mb-10">
+                    The process takes under two minutes. Choose a slot that works for you and
+                    receive an instant calendar confirmation.
+                  </p>
+
+                  {/* Steps */}
+                  <div className="space-y-3 mb-10 pb-10 border-b border-midnight-muted">
+                    {[
+                      "Click the button to open the booking portal",
+                      "Choose your preferred date and time",
+                      "Enter your name and email address",
+                      "Receive an instant calendar confirmation",
+                    ].map((step, i) => (
+                      <div key={step} className="flex items-center gap-4">
+                        <span className="w-6 h-6 rounded-full bg-midnight-muted flex items-center justify-center text-xs font-bold text-ice-muted flex-shrink-0">
+                          {i + 1}
+                        </span>
+                        <span className="text-sm text-ice-muted">{step}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <a
+                    href="https://bookings.cloud.microsoft/book/QuorbitFullStackMarketingAutomationAgency@thequorbit.com/?ismsaljsauthenabled"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 w-full bg-yellow text-midnight font-bold px-8 py-4 rounded-lg hover:bg-yellow-dark transition-all text-sm uppercase tracking-widest"
+                  >
+                    Open Booking Calendar
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+
+                  {/* Trust line */}
+                  <div className="flex items-center justify-center gap-2.5 mt-5">
+                    <svg
+                      className="w-3.5 h-3.5 text-ice-muted/50 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                      />
+                    </svg>
+                    <p className="text-xs text-ice-muted/60 text-center">
+                      Secure Microsoft Bookings portal · Opens in a new tab · No account required
+                    </p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
 
