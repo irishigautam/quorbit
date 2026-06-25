@@ -253,7 +253,7 @@ export default function LaunchPage() {
               like for your business.
             </p>
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-2 bg-yellow text-midnight font-bold px-8 py-4 rounded-lg hover:bg-yellow-dark transition-all text-sm"
             >
               Schedule My Strategy Call

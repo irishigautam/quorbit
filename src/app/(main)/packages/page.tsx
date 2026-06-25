@@ -103,7 +103,7 @@ export default function PackagesPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-2 bg-yellow text-midnight font-bold px-6 py-3.5 rounded-lg hover:bg-yellow-dark transition-all text-sm"
             >
               Schedule a Strategy Call
@@ -326,7 +326,7 @@ export default function PackagesPage() {
                     ))}
                   </ul>
                   <Link
-                    href="/contact"
+                    href="/schedule-a-call"
                     className="flex items-center justify-center gap-2 bg-yellow text-midnight font-bold px-5 py-3 rounded-lg hover:bg-yellow-dark transition-all text-sm w-full"
                   >
                     Let&apos;s Talk
@@ -362,7 +362,7 @@ export default function PackagesPage() {
               and give you a clear path forward.
             </p>
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-3 bg-yellow text-midnight font-bold px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-dark transition-colors"
             >
               Schedule My Strategy Call

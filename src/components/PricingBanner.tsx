@@ -39,7 +39,7 @@ export default function PricingBanner({
           </div>
           <div className="mt-8 pt-8 border-t border-midnight-muted flex flex-col sm:flex-row sm:items-center gap-4">
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-2 bg-yellow text-midnight font-bold px-6 py-3.5 rounded-lg hover:bg-yellow-dark transition-all text-sm"
             >
               Get Started with This Package

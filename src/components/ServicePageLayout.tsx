@@ -180,7 +180,7 @@ export default function ServicePageLayout({
             <h2 className="text-3xl sm:text-4xl font-black text-ice mb-5 leading-tight">{ctaHeadline}</h2>
             <p className="text-ice-muted text-lg mb-10 leading-relaxed">{ctaBody}</p>
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-2 bg-yellow text-midnight font-bold px-8 py-4 rounded-lg hover:bg-yellow-dark transition-all text-sm"
             >
               Schedule My Strategy Call

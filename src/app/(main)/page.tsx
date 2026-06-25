@@ -129,7 +129,7 @@ export default function Home() {
               Schedule a free 30-minute strategy call. We&apos;ll bring an honest read and a clear path forward.
             </p>
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-3 bg-yellow text-midnight font-bold px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-dark transition-colors"
             >
               Schedule My Strategy Call

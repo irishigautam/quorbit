@@ -162,7 +162,7 @@ export default function ServicesSection() {
             }}
           >
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-2 bg-yellow hover:bg-yellow-dark text-midnight text-xs font-black px-6 py-3 rounded-full uppercase tracking-widest transition-colors duration-200"
             >
               Discuss Your Scope

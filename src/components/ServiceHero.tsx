@@ -51,7 +51,7 @@ export default function ServiceHero({ badge, headline, subheadline }: Props) {
         </p>
         <div className="sh-item sh-cta">
           <Link
-            href="/contact"
+            href="/schedule-a-call"
             className="inline-flex items-center gap-2 bg-yellow text-midnight font-bold px-6 py-3.5 rounded-lg hover:bg-yellow-dark transition-all text-sm"
           >
             Schedule a Free Strategy Call

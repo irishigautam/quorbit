@@ -318,7 +318,7 @@ export default function AscentPage() {
               business, identify the fastest-path channels, and give you a clear first-90-days plan.
             </p>
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-2 bg-yellow text-midnight font-bold px-8 py-4 rounded-lg hover:bg-yellow-dark transition-all text-sm"
             >
               Schedule My Strategy Call

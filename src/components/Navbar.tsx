@@ -95,7 +95,7 @@ export default function Navbar() {
         <div className="flex items-center justify-end">
           {/* Desktop CTA */}
           <Link
-            href="/contact"
+            href="/schedule-a-call"
             className="hidden md:inline-flex items-center gap-1.5 bg-yellow hover:bg-yellow-dark text-midnight text-xs font-bold px-5 py-2.5 rounded-full uppercase tracking-widest transition-colors"
           >
             Schedule a Call
@@ -153,7 +153,7 @@ export default function Navbar() {
           </div>
           <div className="pt-3 border-t border-midnight-muted mt-3">
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="block w-full text-center bg-yellow hover:bg-yellow-dark text-midnight text-sm font-bold px-4 py-2.5 rounded-full uppercase tracking-widest transition-colors"
               onClick={() => setOpen(false)}
             >

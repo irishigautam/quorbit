@@ -53,7 +53,7 @@ export default function Footer() {
               Ready to grow? Schedule a free strategy call. Come with your goals — we come prepared.
             </p>
             <Link
-              href="/contact"
+              href="/schedule-a-call"
               className="inline-flex items-center gap-1.5 bg-yellow text-midnight text-sm font-bold px-4 py-2.5 rounded-lg hover:bg-yellow-dark transition-colors"
             >
               Schedule a Call
